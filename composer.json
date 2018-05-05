@@ -1,5 +1,15 @@
 {
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "prefer-stable": true,
     "require": {
+        "php": ">=7.2",
+        "doctrine/orm": "^2",
+        "guzzlehttp/guzzle": "^6",
+        "paragonie/certainty": "^2",
         "ramsey/uuid": "^3",
         "symfony/console": "^4",
         "symfony/dotenv": "^4",
