@@ -11,11 +11,13 @@
         "guzzlehttp/guzzle": "^6",
         "paragonie/certainty": "^2",
         "ramsey/uuid": "^3",
+        "symfony/config": "^4",
         "symfony/console": "^4",
         "symfony/dotenv": "^4",
         "symfony/filesystem": "^4",
         "symfony/lock": "^4",
         "symfony/routing": "^4",
         "ext-json": "*"
-    }
+    },
+    "type": "project"
 }
