@@ -1,2 +1,11 @@
 {
+    "require": {
+        "ramsey/uuid": "^3",
+        "symfony/console": "^4",
+        "symfony/dotenv": "^4",
+        "symfony/filesystem": "^4",
+        "symfony/lock": "^4",
+        "symfony/routing": "^4",
+        "ext-json": "*"
+    }
 }
