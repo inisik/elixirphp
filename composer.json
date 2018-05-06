@@ -17,6 +17,7 @@
         "symfony/filesystem": "^4",
         "symfony/lock": "^4",
         "symfony/routing": "^4",
+        "symfony/yaml": "^4",
         "ext-json": "*"
     },
     "type": "project"
