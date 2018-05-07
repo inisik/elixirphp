@@ -19,18 +19,16 @@
          stopOnRisky="false"
          failOnRisky="true"
          failOnWarning="true"
-         timeoutForSmallTests="1"
-         timeoutForMediumTests="10"
-         timeoutForLargeTests="60"
+         timeoutForSmallTests="5"
+         timeoutForMediumTests="20"
+         timeoutForLargeTests="40"
          verbose="false">
     <listeners>
         <listener class="ElixirTestListener" file="./elixir.listener.php" />
     </listeners>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./config</directory>
-            <directory suffix=".php">./controllers</directory>
-            <directory suffix=".php">./routes</directory>
+            <directory suffix=".php">./src</directory>
             <exclude>
                 <directory>./vendor</directory>
                 <directory>./build</directory>
@@ -43,6 +41,9 @@
     <testsuites>
         <testsuite name="Authentication Test Suite">
             <directory suffix="Test.php">./tests/authentication</directory>
+        </testsuite>
+        <testsuite name="Page Test Suite">
+            <directory suffix="Test.php">./tests/page</directory>
         </testsuite>
     </testsuites>
 </phpunit>
