@@ -25,9 +25,9 @@
          verbose="false">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
-            <directory suffix=".php">./src</directory>
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./config</directory>
+            <directory suffix=".php">./controllers</directory>
+            <directory suffix=".php">./routes</directory>
             <exclude>
                 <directory>./vendor</directory>
                 <directory>./build</directory>
@@ -38,8 +38,8 @@
         <log type="coverage-clover" target="./build/logs/clover.xml" />
     </logging>
     <testsuites>
-        <testsuite name="Test Suite">
-            <directory suffix="Test.php">./tests</directory>
+        <testsuite name="Authentication Test Suite">
+            <directory suffix="Test.php">./tests/authentication</directory>
         </testsuite>
     </testsuites>
 </phpunit>
