@@ -1,24 +1,42 @@
 {
+    "autoload": {
+        "psr4": {
+            "ElixirPHP\\Config\\": "./config",
+            "ElixirPHP\\Controller\\": "./controllers",
+            "ElixirPHP\\Route\\": "./routes"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "container-interop/container-interop": "^1.2",
+        "doctrine/orm": "^2.6",
+        "guzzlehttp/guzzle": "^6.3",
+        "moontoast/math": "^1.1",
+        "ocramius/generated-hydrator": "^2.2",
+        "ocramius/proxy-manager": "^2.2",
+        "paragonie/certainty": "^2.1",
+        "psr/log": "^1.0",
+        "ramsey/uuid": "^3.7",
+        "ramsey/uuid-doctrine": "^1.4",
+        "symfony/config": "^4.0",
+        "symfony/dotenv": "^4.0",
+        "symfony/expression-language": "^4.0",
+        "symfony/form": "^4.0",
+        "symfony/http-kernel": "^4.0",
+        "symfony/lock": "^4.0",
+        "symfony/process": "^4.0",
+        "symfony/routing": "^4.0",
+        "symfony/security-csrf": "^4.0",
+        "symfony/validator": "^4.0",
+        "symfony/yaml": "^4.0",
+        "zendframework/zend-code": "^3.3",
+        "zendframework/zend-stdlib": "^3.2",
+        "ext-json"
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.2",
-        "doctrine/orm": "^2",
-        "guzzlehttp/guzzle": "^6",
-        "paragonie/certainty": "^2",
-        "ramsey/uuid": "^3",
-        "symfony/config": "^4",
-        "symfony/console": "^4",
-        "symfony/dotenv": "^4",
-        "symfony/filesystem": "^4",
-        "symfony/lock": "^4",
-        "symfony/routing": "^4",
-        "symfony/yaml": "^4",
-        "ext-json": "*"
-    },
-    "type": "project"
+    "prefer-stable": true
 }
