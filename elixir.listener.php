@@ -3,6 +3,10 @@ declare(strict_types=1);
 /**
  * ElixirPHP.
  *
+ * Be able to securely code high level web applications using PHP.
+ *
+ * @author ElixirPHP Contributors <https://github.com/inisik/elixirphp/graphs/contributors>
+ *
  * @license <https://github.com/inisik/elixirphp/blob/master/LICENSE>.
  * @link    <https://github.com/inisik/elixirphp>.
  */
