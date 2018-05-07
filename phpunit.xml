@@ -26,6 +26,8 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./src</directory>
             <exclude>
                 <directory>./vendor</directory>
                 <directory>./build</directory>
