@@ -23,9 +23,6 @@
          timeoutForMediumTests="20"
          timeoutForLargeTests="40"
          verbose="false">
-    <listeners>
-        <listener class="ElixirTestListener" file="./elixir.listener.php" />
-    </listeners>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
