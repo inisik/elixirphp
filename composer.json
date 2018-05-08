@@ -1,4 +1,16 @@
 {
+    "name": "elixirphp/elixirphp",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "description": "Be able to securely code high level web applications using ElixirPHP.",
+    "keywords": [
+        "elixir-php",
+        "secure-by-default",
+        "mvc-architecture",
+        "coding-standard",
+        "elegant-code",
+        "php7"
+    ],
     "autoload": {
         "psr4": {
             "ElixirPHP\\Config\\": "./config",
