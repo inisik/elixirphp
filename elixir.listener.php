@@ -1,179 +1,51 @@
 <?php
-/**
- * ElixirPHP.
- *
- * Be able to securely code high level web applications using ElixirPHP.
- *
- * @author ElixirPHP Contributors <https://github.com/inisik/elixirphp/graphs/contributors>
- *
- * @license <https://github.com/inisik/elixirphp/blob/master/LICENSE>.
- * @link    <https://github.com/inisik/elixirphp>.
- */
+use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestListener;
 
-use PHPUnit\Framework\{
-    TestListener,
-    TestCase
-};
-
-/**
- * @class      ElixirTestListener.
- * @implements TestListener.
- */
-class ElixirTestListener implements TestListener
+class SimpleTestListener implements TestListener
 {
-
-    /**
-     * @function addError.
-     * @param PHPUnit\Framework\Test $test.
-     * @param Exception              $e.
-     * @param mixed                  $time.
-     * @return void.
-     */
-    public function addError(
-        PHPUnit\Framework\Test $test,
-        Exception $e,
-        $time
-    ) {
-        printf(
-            "Error: Error Running Test\n"
-        );
+    public function addError(PHPUnit\Framework\Test $test, Exception $e, $time)
+    {
+        printf("Error while running test '%s'.\n", $test->getName());
     }
 
-    /**
-     * @function addFailure.
-     * @param PHPUnit\Framework\Test                 $test.
-     * @param PHPUnit\Framework\AssertionFailedError $e.
-     * @param mixed                                  $time.
-     * @return void.
-     */
-    public function addFailure(
-        PHPUnit\Framework\Test $test,
-        PHPUnit\Framework\AssertionFailedError $e,
-        $time
-    ) {
-        printf(
-            "Failure: Test Could Not Properly Verify Functionality\n"
-        );
+    public function addFailure(PHPUnit\Framework\Test $test, PHPUnit\Framework\AssertionFailedError $e, $time)
+    {
+        printf("Test '%s' failed.\n", $test->getName());
     }
 
-    /**
-     * @function addIncompleteTest.
-     * @param PHPUnit\Framework\Test $test.
-     * @param Exception              $e.
-     * @param mixed                  $time.
-     * @return void.
-     */
-    public function addIncompleteTest(
-        PHPUnit\Framework\Test $test,
-        Exception $e,
-        $time
-    ) {
-        printf(
-            "Incomplete: Test Is Not Properly Coded\n"
-        );
+    public function addIncompleteTest(PHPUnit\Framework\Test $test, Exception $e, $time)
+    {
+        printf("Test '%s' is incomplete.\n", $test->getName());
     }
 
-    /**
-     * @function addRiskyTest.
-     * @param PHPUnit\Framework\Test $test.
-     * @param Exception              $e.
-     * @param mixed                  $time.
-     * @return void.
-     */
-    public function addRiskyTest(
-        PHPUnit\Framework\Test $test,
-        Exception $e,
-        $time
-    ) {
-        printf(
-            "Risky: Test Is Risky And Should Be Recoded\n"
-        );
+    public function addRiskyTest(PHPUnit\Framework\Test $test, Exception $e, $time)
+    {
+        printf("Test '%s' is deemed risky.\n", $test->getName());
     }
 
-    /**
-     * @function addSkippedTest.
-     * @param PHPUnit\Framework\Test $test.
-     * @param Exception              $e.
-     * @param mixed                  $time.
-     * @return void.
-     */
-    public function addSkippedTest(
-        PHPUnit\Framework\Test $test,
-        Exception $e,
-        $time
-    ) {
-        printf(
-            "Skipped: Test Is Skipped By The Repository\n"
-        );
+    public function addSkippedTest(PHPUnit\Framework\Test $test, Exception $e, $time)
+    {
+        printf("Test '%s' has been skipped.\n", $test->getName());
     }
 
-    /**
-     * @function startTest.
-     * @param PHPUnit\Framework\Test $test.
-     * @return void.
-     */
-    public function startTest(
-        PHPUnit\Framework\Test $test
-    ) {
-        printf(
-            "------------------\n" .
-            "Test:   %s\n" .
-            "Status: Running...\n" . 
-            "------------------\n",
-            $test->getName()
-        );
+    public function startTest(PHPUnit\Framework\Test $test)
+    {
+        printf("Test '%s' started.\n", $test->getName());
     }
 
-    /**
-     * @function endTest.
-     * @param PHPUnit\Framework\Test $test.
-     * @param mixed                  $time.
-     * @return void.
-     */
-    public function endTest(
-        PHPUnit\Framework\Test $test,
-        $time
-    ) {
-        printf(
-            "------------------\n" .
-            "Test:   %s\n" .
-            "Status: Ended\n" . 
-            "------------------\n",
-            $test->getName()
-        );
+    public function endTest(PHPUnit\Framework\Test $test, $time)
+    {
+        printf("Test '%s' ended.\n", $test->getName());
     }
 
-    /**
-     * @function startTestSuite.
-     * @param PHPUnit\Framework\TestSuite $suite.
-     * @return void.
-     */
-    public function startTestSuite(
-        PHPUnit\Framework\TestSuite $suite
-    ) {
-        printf(
-            "------------------\n" .
-            "TestSuite: %s\n" .
-            "Status:    Running...\n" . 
-            "------------------\n",
-            $suite->getName()
-        );
+    public function startTestSuite(PHPUnit\Framework\TestSuite $suite)
+    {
+        printf("TestSuite '%s' started.\n", $suite->getName());
     }
 
-    /**
-     * @function endTestSuite.
-     * @param PHPUnit\Framework\TestSuite $suite.
-     * @return void.
-     */
-    public function endTestSuite(
-        PHPUnit\Framework\TestSuite $suite
-    ) {
-        printf(
-            "------------------\n" .
-            "TestSuite: %s\n" .
-            "Status:    Ended\n" . 
-            "------------------\n",
-            $suite->getName()
-        );
+    public function endTestSuite(PHPUnit\Framework\TestSuite $suite)
+    {
+        printf("TestSuite '%s' ended.\n", $suite->getName());
     }
 }
