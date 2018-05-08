@@ -11,10 +11,8 @@ declare(strict_types=1);
  * @link    <https://github.com/inisik/elixirphp>.
  */
 
-use PHPUnit\Framework\{
-    TestListener,
-    TestCase
-};
+use PHPUnit\Framework\TestListener;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @class      ElixirTestListener.
