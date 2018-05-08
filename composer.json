@@ -2,7 +2,7 @@
     "name": "elixirphp/elixirphp",
     "type": "project",
     "license": "BSD-3-Clause",
-    "description": "Be able to securely code high level web applications using ElixirPHP.",
+    "description": "Securely code high level web applications using ElixirPHP.",
     "keywords": [
         "elixir-php",
         "secure-by-default",
