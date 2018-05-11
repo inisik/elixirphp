@@ -15,7 +15,8 @@
         "psr4": {
             "ElixirPHP\\Config\\": "./config",
             "ElixirPHP\\Controller\\": "./controllers",
-            "ElixirPHP\\Route\\": "./routes"
+            "ElixirPHP\\Route\\": "./routes",
+            "ElixirPHP\\App\\": "./app"
         }
     },
     "scripts": {
