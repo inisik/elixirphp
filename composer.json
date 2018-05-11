@@ -18,6 +18,11 @@
             "ElixirPHP\\Route\\": "./routes"
         }
     },
+    "scripts": {
+        "post-create-project-cmd": {
+            "php -r \"copy('.env.example.ini', '.env.ini');\""
+        }
+    }
     "require-dev": {
         "phpunit/phpunit": "^7",
         "vimeo/psalm": "^1"
