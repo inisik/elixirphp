@@ -28,3 +28,6 @@ cache:
     directories:
         - vendor
         - $HOME/.cache/composer
+addons:
+    apt:
+        update: true
